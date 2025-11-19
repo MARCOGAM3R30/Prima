@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="try"/>
+        <attribute name="authors" value="marco"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-12 05:13:33 "/>
+        <attribute name="created" value="bWFyY287TUFSQ09TUEM7MjAyNS0wNC0yODsiMDQ6NTU6NTAgIjsyMzI3"/>
+        <attribute name="edited" value="NzkzNDUzODE7SU5GTzEyUEMwNjsyMDI1LTA0LTI5OyIxMDoyMDo0MiAiOzE7MjM2OA=="/>
+        <attribute name="edited" value="bWFyY287TUFSQ09TUEM7MjAyNS0wNS0xMjsiMDU6MTM6MzMgIjszOzI0Mjc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nr, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Quanti triangoli vuoi alla base? &quot;" newline="True"/>
+            <input variable="nr"/>
+            <turn expression="90" rotate="right"/>
+            <for variable="i" start="0" end="nr * 2 + 1" direction="inc" step="1">
+                <for variable="i" start="0" end="nr - 1" direction="inc" step="1">
+                    <call expression="tri"/>
+                    <forward expression="50" pen="down"/>
+                </for>
+                <forward expression="-50 * nr" pen="down"/>
+                <turn expression="90" rotate="left"/>
+                <forward expression="42.5" pen="up"/>
+                <turn expression="90" rotate="right"/>
+                <forward expression="25" pen="up"/>
+                <assign variable="nr" expression="nr - 1"/>
+            </for>
+        </body>
+    </function>
+    <function name="tri" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nr, i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <forward expression="50" pen="down"/>
+                <turn expression="120" rotate="left"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

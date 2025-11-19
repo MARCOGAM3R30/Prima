@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="11 - vettori"/>
+        <attribute name="authors" value="marco"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-11 06:02:22 "/>
+        <attribute name="created" value="bWFyY287TUFSQ09TUEM7MjAyNS0wNC0xNDsiMDU6MzU6NDcgIjsyMzI3"/>
+        <attribute name="edited" value="NzkzNDUzODE7SU5GTzEyUEMwNjsyMDI1LTA0LTI5OyIxMTowODowMiAiOzE7MjM3MQ=="/>
+        <attribute name="edited" value="bWFyY287TUFSQ09TUEM7MjAyNS0wNS0xMTsiMDY6MDI6MjIgIjsyOzI0MjI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dim, i, max, min, media" type="Real" array="False" size=""/>
+            <output expression="&quot;Quante temperature hai misurato? &quot;" newline="True"/>
+            <input variable="dim"/>
+            <declare name="temp" type="Real" array="True" size="dim"/>
+            <for variable="i" start="0" end="dim - 1" direction="inc" step="1">
+                <output expression="&quot;Dammi i valori della temperatura &quot; &amp; i + 1" newline="True"/>
+                <input variable="temp[i]"/>
+            </for>
+            <assign variable="media" expression="0"/>
+            <for variable="i" start="0" end="dim - 1 " direction="inc" step="1">
+                <assign variable="media" expression="media + temp[i]"/>
+                <if expression="i == 0">
+                    <then>
+                        <assign variable="max" expression="temp[i]"/>
+                        <assign variable="min" expression="temp[i]"/>
+                    </then>
+                    <else>
+                        <if expression="temp[i] &lt; min">
+                            <then>
+                                <assign variable="min" expression="temp[i]"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <if expression="temp[i] &gt; max">
+                            <then>
+                                <assign variable="max" expression="temp[i]"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <assign variable="media" expression="media/dim"/>
+            <output expression="&quot;La media &#232; &quot; &amp; media" newline="True"/>
+            <output expression="&quot;Il minimo &#232; &quot; &amp; min" newline="True"/>
+            <output expression="&quot;Il massimo &#232; &quot; &amp; max" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

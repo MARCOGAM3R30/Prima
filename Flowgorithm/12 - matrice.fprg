@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="12 - STRINGHE VET"/>
+        <attribute name="authors" value="79345381"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-11 05:28:28 "/>
+        <attribute name="created" value="NzkzNDUzODE7SU5GTzEyUEMwNjsyMDI1LTA0LTE1OyIxMDoxNjozNCAiOzIyNjE="/>
+        <attribute name="edited" value="NzkzNDUzODE7SU5GTzEyUEMwNjsyMDI1LTA0LTI5OyIxMDo0NTozNyAiOzY7MjM4NA=="/>
+        <attribute name="edited" value="bWFyY287TUFSQ09TUEM7MjAyNS0wNS0xMTsiMDU6Mjg6MjggIjs1OzI0Mzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tris" type="String" array="True" size="9"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="8" direction="inc" step="1">
+                <call expression="posizione(i, tris)"/>
+            </for>
+            <call expression="tris(tris)"/>
+        </body>
+    </function>
+    <function name="posizione" type="None" variable="">
+        <parameters>
+            <parameter name="x" type="Integer" array="False"/>
+            <parameter name="y" type="String" array="True"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Cosa vuoi al posto &quot; &amp; x + 1 &amp; &quot; (O o X)&quot;" newline="True"/>
+            <input variable="y[x]"/>
+            <while expression="y[x] != &quot;O&quot; and y[x] != &quot;X&quot;">
+                <output expression="&quot;ERRORE, riprova&quot;" newline="True"/>
+                <input variable="y[x]"/>
+            </while>
+        </body>
+    </function>
+    <function name="tris" type="None" variable="">
+        <parameters>
+            <parameter name="x" type="String" array="True"/>
+        </parameters>
+        <body>
+            <output expression="x[3*3-9]" newline="False"/>
+            <output expression="&quot; | &quot; &amp; x[3*3-8] &amp; &quot; | &quot;" newline="False"/>
+            <output expression="x[3*3-7]" newline="True"/>
+            <output expression="x[3*3-6]" newline="False"/>
+            <output expression="&quot; | &quot; &amp; x[3*3-5] &amp; &quot; | &quot;" newline="False"/>
+            <output expression="x[3*3-4]" newline="True"/>
+            <output expression="x[3*3-3]" newline="False"/>
+            <output expression="&quot; | &quot; &amp; x[3*3-2] &amp; &quot; | &quot;" newline="False"/>
+            <output expression="x[3*3-1]" newline="False"/>
+        </body>
+    </function>
+</flowgorithm>

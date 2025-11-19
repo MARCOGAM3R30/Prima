@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="79345381"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-25 11:26:41 "/>
+        <attribute name="created" value="NzkzNDUzODE7SU5GTzEyUEMwNjsyMDI1LTAzLTI1OyIxMToyNToyNSAiOzIyNjI="/>
+        <attribute name="edited" value="NzkzNDUzODE7SU5GTzEyUEMwNjsyMDI1LTAzLTI1OyIxMToyNjo0MSAiOzE7MjM2OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;quanti lati vuoi?&quot;" newline="True"/>
+            <input variable="n"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <forward expression="400 / n" pen="down"/>
+                <turn expression="360 / n" rotate="right"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

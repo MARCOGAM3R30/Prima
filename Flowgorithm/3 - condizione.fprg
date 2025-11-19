@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="79345381"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-18 10:50:38 "/>
+        <attribute name="created" value="NzkzNDUzODE7SU5GTzEyUEMwNjsyMDI1LTAzLTE4OyIxMDo0Njo1MyAiOzIyNjc="/>
+        <attribute name="edited" value="NzkzNDUzODE7SU5GTzEyUEMwNjsyMDI1LTAzLTE4OyIxMDo1MDozOCAiOzE7MjM3Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2" type="Real" array="False" size=""/>
+            <output expression="&quot;Dimmi il primo numero&quot;" newline="True"/>
+            <input variable="num1"/>
+            <output expression="&quot;Dimmi il secondo numero&quot;" newline="True"/>
+            <input variable="num2"/>
+            <if expression="num1 &gt; num2">
+                <then>
+                    <output expression="num1 &amp; &quot; &#232; maggiore di &quot; &amp;  num2" newline="True"/>
+                </then>
+                <else>
+                    <output expression="num2 &amp; &quot; &#232; maggiore di &quot; &amp; num1" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

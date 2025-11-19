@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="11 - vettori (2)"/>
+        <attribute name="authors" value="70676498"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-13 11:30:46 "/>
+        <attribute name="created" value="NzA2NzY0OTg7SU5GTzEyUEMwNDsyMDI1LTA0LTA4OyIxMDoyMTo0MSAiOzIyNjI="/>
+        <attribute name="edited" value="NzA2NzY0OTg7SU5GTzEyUEMwNDsyMDI1LTA1LTEzOyIxMToxNzowOCAiOzE5NTsyNDg2"/>
+        <attribute name="edited" value="NzkzNDUzODE7SU5GTzEyUEMwNjsyMDI1LTA1LTEzOyIxMTozMDo0NiAiOzI7MjM2OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, media, max, min, n" type="Integer" array="False" size=""/>
+            <output expression="&quot;quanti valori? &quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="temperatura" type="Real" array="True" size="n"/>
+            <call expression="valori(n, temperatura)"/>
+            <call expression="media(n, temperatura)"/>
+            <call expression="min(n, temperatura)"/>
+            <call expression="max(n, temperatura)"/>
+        </body>
+    </function>
+    <function name="max" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+            <parameter name="temperatura" type="Real" array="True"/>
+        </parameters>
+        <body>
+            <declare name="max" type="Real" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="max" expression="temperatura[0]"/>
+            <for variable="i" start="1" end="n-1" direction="inc" step="1">
+                <if expression="max &gt; temperatura[i]">
+                    <then/>
+                    <else>
+                        <assign variable="max" expression="temperatura[i]"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;La temperatura max &#232; &quot; &amp; max" newline="True"/>
+        </body>
+    </function>
+    <function name="Media" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+            <parameter name="temperatura" type="Real" array="True"/>
+        </parameters>
+        <body>
+            <declare name="media, i" type="Real" array="False" size=""/>
+            <assign variable="media" expression="0"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="media" expression="media + temperatura[i]"/>
+            </for>
+            <assign variable="media" expression="media/n"/>
+            <output expression="&quot;la media &#232; &quot; &amp; media" newline="True"/>
+        </body>
+    </function>
+    <function name="min" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+            <parameter name="temperatura" type="Real" array="True"/>
+        </parameters>
+        <body>
+            <declare name="min" type="Real" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="min" expression="temperatura[0]"/>
+            <for variable="i" start="1" end="n-1" direction="inc" step="1">
+                <if expression="min &lt; temperatura[i]">
+                    <then/>
+                    <else>
+                        <assign variable="min" expression="temperatura[i]"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;La temperatura minima &#232; &quot; &amp; min" newline="True"/>
+        </body>
+    </function>
+    <function name="valori" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Real" array="False"/>
+            <parameter name="temperatura" type="Real" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;inserisci il valore al posto &quot; &amp; i + 1" newline="True"/>
+                <input variable="temperatura[i]"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

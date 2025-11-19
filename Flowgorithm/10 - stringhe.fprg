@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="79345381"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-08 10:20:29 "/>
+        <attribute name="created" value="NzkzNDUzODE7SU5GTzEyUEMwNjsyMDI1LTA0LTA4OyIxMDoxMjozNSAiOzIyNjA="/>
+        <attribute name="edited" value="NzkzNDUzODE7SU5GTzEyUEMwNjsyMDI1LTA0LTA4OyIxMDoyMDoyOSAiOzI7MjM3MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nome, cognome" type="String" array="False" size=""/>
+            <output expression="&quot;dimmi il nome&quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot;dimmi il cognome&quot;" newline="True"/>
+            <input variable="cognome"/>
+            <output expression="&quot;ciao &quot; &amp; nome &amp; &quot; &quot; &amp; cognome" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
